@@ -27,7 +27,6 @@ public class Sumoftwoarrays {
 //        }
 //        return c;
 //    }
-
     public static void sumOfTwoArrays(int arr1[], int arr2[], int output[]) {
         //Your code goes here
 //        int out = getnumber(arr1) + getnumber(arr2);
@@ -40,49 +39,47 @@ public class Sumoftwoarrays {
 //            System.out.print(output[i] + " ");
 //        }
 //
-         int i=arr1.length-1;
-        int j=arr2.length-1;
-        int k=output.length-1;
-        int carr=0;
-        while(i>=0&&j>=0){
-            output[k]=(arr1[i]+arr2[j]+carr)%10;
-            carr=(arr1[i]+arr2[j]+carr)/10;
+        int i = arr1.length - 1;
+        int j = arr2.length - 1;
+        int k = output.length - 1;
+        int carr = 0;
+        while (i >= 0 && j >= 0) {
+            output[k] = (arr1[i] + arr2[j] + carr) % 10;
+            carr = (arr1[i] + arr2[j] + carr) / 10;
             i--;
             j--;
             k--;
         }
-        if(i<0&&j<0){
-            output[0]=carr;
+        if (i < 0 && j < 0) {
+            output[0] = carr;
+        } else {
+            while (i >= 0) {
+                output[k] = (arr1[i] + carr) % 10;
+                carr = (arr1[i] + carr) / 10;
+                i--;
+                k--;
+            }
+            while (j >= 0) {
+                output[k] = (arr2[j] + carr) % 10;
+                carr = (arr2[j] + carr) / 10;
+                j--;
+                k--;
+            }
+            output[0] = carr;
         }
-        else{
-        while(i>=0){
-            output[k]=(arr1[i]+carr)%10;
-            carr=(arr1[i]+carr)/10;
-            i--;
-            k--;
-        }
-        while(j>=0){
-            output[k]=(arr2[j]+carr)%10;
-            carr=(arr2[j]+carr)/10;
-            j--;
-            k--;
-        }
-        output[0]=carr;
-        }
-                for (int a = 0; a <output.length ; a++) {
+        for (int a = 0; a < output.length; a++) {
             System.out.print(output[a] + " ");
         }
-  }
+    }
 
     public static void main(String[] args) {
-        int[] arr1 = {9,9,9,1,3,4};
-        int[] arr2 = {2,0,6,6};
-        int[] arr3 ;
-        if(arr1.length>=arr2.length){
-            arr3=new int[arr1.length+1];
-        }
-        else{
-            arr3=new int[arr2.length+1];
+        int[] arr1 = {9, 9, 9, 1, 3, 4};
+        int[] arr2 = {2, 0, 6, 6};
+        int[] arr3;
+        if (arr1.length >= arr2.length) {
+            arr3 = new int[arr1.length + 1];
+        } else {
+            arr3 = new int[arr2.length + 1];
         }
         sumOfTwoArrays(arr1, arr2, arr3);
 
