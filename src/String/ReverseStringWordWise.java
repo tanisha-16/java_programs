@@ -18,7 +18,7 @@ public class ReverseStringWordWise {
         }
         return rev;
     }
-
+    //My solution
     public static String reverseWordWise(String input) {
         // Write your code here
         int start = 0;
@@ -34,6 +34,7 @@ public class ReverseStringWordWise {
         res += reverse(input.substring(start, input.length()));
         return res;
     }
+    
 
     public static void main(String[] args) {
         //System.out.println(reverseWordWise("Welcome To the net beans"));
