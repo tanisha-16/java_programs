@@ -27,17 +27,5 @@ public class RemoveConsecutiveDuplicates {
     public static void main(String[] args) {
         String str = "aaaaaaabcbbbdb";
         System.out.println(removeConsecutiveDuplicates(str));
-//        String res = "";
-//        int[] c = new int[256];
-//        for (int i = 0; i < str.length(); i++) {
-//            if(str.charAt(i)==str.charAt(i+1)){
-//                res+=str.charAt(i);
-//                i=i+1;
-//            }
-//            else{
-//                res+=str.charAt(i);
-//            }
-//        }
-//        System.out.println(res);
     }
 }
