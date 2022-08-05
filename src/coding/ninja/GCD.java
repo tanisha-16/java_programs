@@ -9,25 +9,23 @@ package coding.ninja;
  *
  * @author Lenovo
  */
-public class GCD
-{
-	public static void main(String[] args) {
-		int a=10,b=6;
-		int temp=1;
-		if(a==b){
-		    System.out.print(1);
-		}
-		else if(a%b==0){
-		    System.out.println(b);
-		}
-		else{
-		    while(temp!=0){
-		    temp=a%b;
-		    a=b;
-		    b=temp;
-		    }
-		    System.out.println(a);
-		}
-		
-	}
+public class GCD {
+
+    public static void main(String[] args) {
+        int a = 10, b = 10;
+        int temp = 1;
+        if (a == b) {
+            System.out.print(a);
+        } else if (a % b == 0) {
+            System.out.println(b);
+        } else {
+            while (temp != 0) {
+                temp = a % b;
+                a = b;
+                b = temp;
+            }
+            System.out.println(a);
+        }
+
+    }
 }
