@@ -1,5 +1,6 @@
 package oops;
 
+
 public class Fraction {
 	private int numerator;
 	private int denominator;
@@ -28,10 +29,10 @@ public class Fraction {
 	}
 	
 	
-	public void setDenominator(int d) {
+	public void setDenominator(int d) throws ZeroDenominatorException{
 		if (d == 0){
-			// TODO error out
-			return;
+                    ZeroDenominatorException e=new ZeroDenominatorException();
+                    throw e;
 		}
 		this.denominator = d;
 		this.simplify();
@@ -75,5 +76,7 @@ public class Fraction {
 		this.denominator = this.denominator * f2.denominator;
 		simplify();
 	}
+
+    
 	
 }
