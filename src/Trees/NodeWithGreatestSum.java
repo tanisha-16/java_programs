@@ -22,7 +22,7 @@ public class NodeWithGreatestSum {
         }
         return max;
     }
-
+    
     public static TreeNode<Integer> maxSumNode(TreeNode<Integer> root) {
         int max=sum(root);
         TreeNode<Integer> maxNode=root;
